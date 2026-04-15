@@ -1,5 +1,5 @@
 enum CategoriesAPIEnum {
-  Foof = "Food",
+  Food = "food",
   Others = "others",
   Services = "services",
   Transport = "transport",

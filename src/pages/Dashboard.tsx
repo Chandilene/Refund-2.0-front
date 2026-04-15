@@ -29,11 +29,11 @@ export function Dashboard() {
 
   async function fetchRefunds() {
     try {
-      const response = await api.get(
+      const response = await api.get<RefundsPaginationAPIResponse>(
         `/refunds?name=${name.trim()}&page=${page}&perPage=${PER_PAGE}`,
       );
 
-      console.log(response.data);
+      console.log(response.data.refunds[0].amount);
     } catch (error) {
       console.log(error);
 
